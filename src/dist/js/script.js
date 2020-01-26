@@ -110,12 +110,16 @@ firebase.auth().onAuthStateChanged(function(user) {
       new Chartist.Bar('.net-income', data, options, responsiveOptions);
 
     });
-    userRef.child('devices/temp').once('value', function(snap){
+    userRef.child('devices/temp').on('value', function(snap){
       $('#temp').text(Math.round((snap.val() + Number.EPSILON) * 100) / 100);
-    })
-    userRef.child('devices/door').once('value', function(snap){
+    });
+    userRef.child('devices/door').on('value', function(snap){
       if(!snap.val()) $("#door").text("OPEN");
       else $("#door").text("CLOSED");
+    });
+    userRef.child('devices/leak').on('value', function(snap){
+      if(snap.val()) $("#leak").text("LEAK");
+      else $("#leak").text("ALL SAFE");
     });
     userRef.child('carbon').orderByValue().limitToLast(4).on('value', function(snap){
       var i = 0;
