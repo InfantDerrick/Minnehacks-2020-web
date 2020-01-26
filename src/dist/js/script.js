@@ -8,10 +8,10 @@ $(function () {
         bindto: '#campaign-v2',
         data: {
             columns: [
-                ['Direct Sales', 25],
-                ['Referral Sales', 15],
-                ['Afilliate Sales', 10],
-                ['Indirect Sales', 15]
+                ['Transportation', 60],
+                ['Energy', 15],
+                ['Food', 15],
+                ['Other', 10]
             ],
 
             type: 'donut',
@@ -42,13 +42,10 @@ $(function () {
 
     d3.select('#campaign-v2 .c3-chart-arcs-title').style('font-family', 'Rubik');
 
-    // ==============================================================
-    // income
-    // ==============================================================
     var data = {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
         series: [
-            [5, 4, 3, 7, 5, 10]
+            [-50, 40, -300, 250, 530, -100]
         ]
     };
 
@@ -119,11 +116,11 @@ $(function () {
     var chart = new Chartist.Line('.stats', {
         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         series: [
-            [11, 10, 15, 21, 14, 23, 12]
+            [400, 120, 105, 211, 143, 123, 212]
         ]
     }, {
         low: 0,
-        high: 28,
+        high: 1000,
         showArea: true,
         fullWidth: true,
         plugins: [
