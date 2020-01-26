@@ -102,6 +102,7 @@ function publicAdd(){
 function ecoAdd(){
   var newPoints;
   var select = $("#ecoSelect").val();
+  console.log(select);
   if(select == 1){
     newPoints = parseFloat($("#milesEco").val()) * 10;
   }else if(select == 2){
@@ -109,10 +110,40 @@ function ecoAdd(){
   }else{
     newPoints = parseFloat($("#milesEco").val()) * 2.5;
   }
-  console.log(parseFloat($("#ecoPublic").val()));
+  console.log(newPoints);
   firebase.database().ref('super/'+dpn+'/points').once('value', function(snapshot){
     newPoints = snapshot.val() + newPoints;
   }).then(function(){
     firebase.database().ref('super/'+dpn+'/points').set(newPoints);
+  });
+}
+function energyAdd(){
+  var fboil, fbgas, fbe;
+  var total;
+  userRef.once('value', function(snap){
+    fboil = snap.val().oil;
+    fbgas = snap.val().gas;
+    fbe = snap.val().electricity;
+    total = snap.val().total;
+  }).then(function(){
+    var co2 = parseFloat($("#kwh").val()) * parseFloat($("#timeE").val()) * 0.45449955 + parseFloat($("#therms").val()) * parseFloat($("#timeT").val()) * 5.48 +
+    parseFloat($("#gallons").val()) * parseFloat($("#timeG").val()) * 10.15;
+    total += co2;
+    fboil += parseFloat($("#gallons").val()) * parseFloat($("#timeG").val()) * 10.15;
+    fbgas += parseFloat($("#therms").val()) * parseFloat($("#timeT").val()) * 5.48
+    fbe += parseFloat($("#kwh").val()) * parseFloat($("#timeE").val()) * 0.45449955;
+    console.log(fboil);
+    userRef.update({
+      total: total,
+      oil: fboil,
+      gas: fbgas,
+      electricity: fbe,
+    });
+    var newPoints;
+    firebase.database().ref('super/'+dpn+'/points').once('value', function(snapshot){
+      newPoints = snapshot.val() - co2;
+    }).then(function(){
+      firebase.database().ref('super/'+dpn+'/points').set(newPoints);
+    });
   });
 }

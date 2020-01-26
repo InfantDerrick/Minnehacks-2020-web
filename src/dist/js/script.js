@@ -13,7 +13,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     });
     userRef.child("carbon/total").once('value', function(snap){
       total = snap.val();
-      $('#CO2Main').text(total);
+      $('#CO2Main').text(Math.round((total + Number.EPSILON) * 100) / 100);
     }).then(function(){
       var chart = new Chartist.Line('.stats', {
           labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -71,7 +71,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     });
     userRef.child("points").once('value', function(snap){
       points = snap.val();
-      $('#pointsMain').text(points);
+      $('#pointsMain').text(Math.round((points + Number.EPSILON) * 100) / 100);
     }).then(function(){
       var data = {
           labels: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan'],
@@ -111,7 +111,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     });
     userRef.child('devices/temp').once('value', function(snap){
-      $('#temp').text(snap.val());
+      $('#temp').text(Math.round((snap.val() + Number.EPSILON) * 100) / 100);
     })
     userRef.child('devices/door').once('value', function(snap){
       if(!snap.val()) $("#door").text("OPEN");
@@ -121,7 +121,7 @@ firebase.auth().onAuthStateChanged(function(user) {
       var i = 0;
       snap.forEach(function(snapshot){
         $("#act"+i).text(snapshot.key);
-        $('#val'+i).text(snapshot.val());
+        $('#val'+i).text(Math.round((snapshot.val() + Number.EPSILON) * 100) / 100);
         i++;
         if(snapshot.key == 'total') i = 0;
       });
