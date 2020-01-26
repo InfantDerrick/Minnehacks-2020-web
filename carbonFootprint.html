@@ -151,275 +151,275 @@
           <div class="page-wrapper">
             <div class="container-fluid">
               <div class="row">
-                  <div class="col-12">
-                      <div class="card">
-                          <div class="card-body">
-                              <h4 class="card-title">Car Transport</h4>
-                              <form action="#">
-                                  <div class="form-body">
-                                      <label>Miles Travelled</label>
-                                      <div class="row">
-                                          <div class="col-md-4">
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Miles">
-                                              </div>
+                <div class="col-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">Car Transport</h4>
+                      <div>
+                        <div class="form-body">
+                          <label>Miles Travelled</label>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <input id = "milesCar" type="number" class="form-control"
+                                placeholder="Miles">
+                              </div>
 
-                                          </div>
+                            </div>
 
-                                      </div>
-                                      <label>Miles Per Gallon</label>
-                                      <div class="row">
-                                          <div class="col-md-4">
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="MPG">
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="form-actions">
-                                      <div class="text-right">
-                                          <button type="submit" class="btn btn-info">Add</button>                                      </div>
-                                  </div>
-                              </form>
                           </div>
+                          <label>Miles Per Gallon</label>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-group">
+                                <input id = "mpgCar" type="number" class="form-control"
+                                placeholder="MPG">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-actions">
+                          <div class="text-right">
+                            <button onclick="carAdd()" class="btn btn-info">Add</button>                                      </div>
+                          </div>
+                        </div>
                       </div>
+                    </div>
                   </div>
-              </div>
-              <div class="row">
+                </div>
+                <div class="row">
                   <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Air Travel</h4>
+                        <div action="#">
+                          <div class="form-body">
+                            <label>Plane Size</label>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <select id = "planeSelect" type="select" class="custom-select">
+                                    <option value="1" selected>Small Plane</option>
+                                    <option value="2">Large Plane</option>
+                                  </select>
+                                </div>
+                              </div>
+
+                            </div>
+                            <label>Miles Travelled</label>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <input id = "milesPlane" type="text" class="form-control"
+                                  placeholder="Miles">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-actions">
+                            <div class="text-right">
+                              <button onclick="planeAdd()" type="submit" class="btn btn-info">Add</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <h4 class="card-title">Public Transport</h4>
+                        <div action="#">
+                          <div class="form-body">
+                            <label>Mode</label>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <select id = "publicSelect" type="select" class="custom-select">
+                                    <option value="1" selected>Rail</option>
+                                    <option value="2">Subway</option>
+                                    <option value="3">Long Train</option>
+                                    <option value="4">Bus</option>
+                                  </select>
+                                </div>
+
+                              </div>
+
+                            </div>
+                            <label>Miles Travelled</label>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-group">
+                                  <input id = "milesPublic" type="text" class="form-control"
+                                  placeholder="Miles">
+                                </div>
+
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="form-actions">
+                            <div class="text-right">
+                              <button onclick = "publicAdd()" type="submit" class="btn btn-info">Add</button>                                      </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
                       <div class="card">
+                        <div class="card-body">
+                          <h4 class="card-title">Eco Friendly Transport</h4>
+                          <div action="#">
+                            <div class="form-body">
+                              <label>Mode</label>
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <select id = "ecoPublic" type="select" class="custom-select">
+                                      <option value="1" selected>Walking</option>
+                                      <option value="2">Biking</option>
+                                      <option value="3">Electric Car</option>
+                                    </select>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                              <label>Miles Travelled</label>
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <div class="form-group">
+                                    <input id = "milesEco" type="text" class="form-control"
+                                    placeholder="Miles">
+                                  </div>
+
+                                </div>
+
+                              </div>
+                            </div>
+                            <div class="form-actions">
+                              <div class="text-right">
+                                <button onclick = "ecoAdd()" type="submit" class="btn btn-info">Add</button>                                      </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card">
                           <div class="card-body">
-                              <h4 class="card-title">Air Travel</h4>
-                              <form action="#">
-                                  <div class="form-body">
-                                    <label>Plane Size</label>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <select type="select" class="custom-select">
-                                                  <option value="Small Plane" selected>Small Plane</option>
-                                                  <option value="Large Plane">Large Plane</option>
-                                                </select>
-                                            </div>
-
-                                        </div>
-
+                            <h4 class="card-title">Power and Energy</h4>
+                            <form action="#">
+                              <div class="form-body">
+                                <label>Electricity</label>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" class="form-control"
+                                      placeholder="kWH used">
                                     </div>
-                                      <label>Miles Travelled</label>
-                                      <div class="row">
-                                          <div class="col-md-4">
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Miles">
-                                              </div>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="form-actions">
-                                      <div class="text-right">
-                                          <button type="submit" class="btn btn-info">Add</button>
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-12">
-                      <div class="card">
-                          <div class="card-body">
-                              <h4 class="card-title">Public Transport</h4>
-                              <form action="#">
-                                  <div class="form-body">
-                                    <label>Mode</label>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <select type="select" class="custom-select">
-                                                  <option value="1" selected>Rail</option>
-                                                  <option value="2">Subway</option>
-                                                  <option value="3">Long Train</option>
-                                                  <option value="4">Bus</option>
-                                                </select>
-                                            </div>
-
-                                        </div>
-
+                                    <div class="form-group">
+                                      <input type="text" class="form-control"
+                                      placeholder="Time Duration (days)">
                                     </div>
-                                      <label>Miles Travelled</label>
-                                      <div class="row">
-                                          <div class="col-md-4">
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Miles">
-                                              </div>
 
-                                          </div>
-
-                                      </div>
                                   </div>
-                                  <div class="form-actions">
-                                      <div class="text-right">
-                                          <button type="submit" class="btn btn-info">Add</button>                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-12">
-                      <div class="card">
-                          <div class="card-body">
-                              <h4 class="card-title">Eco Friendly Transport</h4>
-                              <form action="#">
-                                  <div class="form-body">
-                                    <label>Mode</label>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <select type="select" class="custom-select">
-                                                  <option value="1" selected>Walking</option>
-                                                  <option value="2">Biking</option>
-                                                  <option value="3">Electric</option>
-                                                  <option value="4">Car</option>
-                                                </select>
-                                            </div>
 
-                                        </div>
-
+                                </div>
+                                <label>Natural Gas</label>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" class="form-control"
+                                      placeholder="Therms">
                                     </div>
-                                      <label>Miles Travelled</label>
-                                      <div class="row">
-                                          <div class="col-md-4">
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Miles">
-                                              </div>
-
-                                          </div>
-
-                                      </div>
-                                  </div>
-                                  <div class="form-actions">
-                                      <div class="text-right">
-                                          <button type="submit" class="btn btn-info">Add</button>                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-12">
-                      <div class="card">
-                          <div class="card-body">
-                              <h4 class="card-title">Power and Energy</h4>
-                              <form action="#">
-                                  <div class="form-body">
-                                    <label>Electricity</label>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                              <input type="text" class="form-control"
-                                                  placeholder="kWH used">
-                                            </div>
-                                            <div class="form-group">
-                                              <input type="text" class="form-control"
-                                                  placeholder="Time Duration (days)">
-                                            </div>
-
-                                        </div>
-
+                                    <div class="form-group">
+                                      <input type="text" class="form-control"
+                                      placeholder="Time Duration">
                                     </div>
-                                      <label>Natural Gas</label>
-                                      <div class="row">
-                                          <div class="col-md-4">
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Therms">
-                                              </div>
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Time Duration">
-                                              </div>
-                                          </div>
-
-                                      </div>
-                                      <label>Heating Oil</label>
-                                      <div class="row">
-                                          <div class="col-md-4">
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Gallons">
-                                              </div>
-                                              <div class="form-group">
-                                                  <input type="text" class="form-control"
-                                                      placeholder="Time Duration">
-                                              </div>
-                                          </div>
-
-                                      </div>
                                   </div>
-                                  <div class="form-actions">
-                                      <div class="text-right">
-                                          <button type="submit" class="btn btn-info">Add</button>                                      </div>
+
+                                </div>
+                                <label>Heating Oil</label>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                      <input type="text" class="form-control"
+                                      placeholder="Gallons">
+                                    </div>
+                                    <div class="form-group">
+                                      <input type="text" class="form-control"
+                                      placeholder="Time Duration">
+                                    </div>
                                   </div>
+
+                                </div>
+                              </div>
+                              <div class="form-actions">
+                                <div class="text-right">
+                                  <button type="submit" class="btn btn-info">Add</button>                                      </div>
+                                </div>
                               </form>
+                            </div>
                           </div>
+                        </div>
                       </div>
+                    </div>
                   </div>
-              </div>
-            </div>
-          </div>
 
 
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+                  <!-- The core Firebase JS SDK is always required and must be listed first -->
+                  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+                  <!-- TODO: Add SDKs for Firebase products that you want to use
+                  https://firebase.google.com/docs/web/setup#available-libraries -->
+                  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
 
-        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+                  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+                  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
 
-        <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyDFbtYt2G4rDvrm6E8rnIZYU6QSkSZ9jUo",
-          authDomain: "cleanse-c7568.firebaseapp.com",
-          databaseURL: "https://cleanse-c7568.firebaseio.com",
-          projectId: "cleanse-c7568",
-          storageBucket: "cleanse-c7568.appspot.com",
-          messagingSenderId: "942094844527",
-          appId: "1:942094844527:web:7f4c7ef20258d224c9839a",
-          measurementId: "G-ER7FTGWB09"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-      </script>
-      <script src="src/assets/libs/jquery/dist/jquery.min.js"></script>
-      <script src="src/assets/libs/popper.js/dist/umd/popper.min.js"></script>
-      <script src="src/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-      <!-- apps -->
-      <!-- apps -->
-      <script src="src/dist/js/app-style-switcher.js"></script>
-      <script src="src/dist/js/feather.min.js"></script>
-      <script src="src/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-      <script src="src/dist/js/sidebarmenu.js"></script>
-      <!--Custom JavaScript -->
-      <script src="src/dist/js/custom.min.js"></script>
-      <!--This page JavaScript -->
-      <script src="src/assets/extra-libs/c3/d3.min.js"></script>
-      <script src="src/assets/extra-libs/c3/c3.min.js"></script>
-      <script src="src/assets/libs/chartist/dist/chartist.min.js"></script>
-      <script src="src/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
-      <script src="src/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
-      <script src="src/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
-      <script src="src/dist/js/pages/dashboards/dashboard1.min.js"></script>
-      </body>
-      </html>
+                  <script>
+                  // Your web app's Firebase configuration
+                  var firebaseConfig = {
+                    apiKey: "AIzaSyDFbtYt2G4rDvrm6E8rnIZYU6QSkSZ9jUo",
+                    authDomain: "cleanse-c7568.firebaseapp.com",
+                    databaseURL: "https://cleanse-c7568.firebaseio.com",
+                    projectId: "cleanse-c7568",
+                    storageBucket: "cleanse-c7568.appspot.com",
+                    messagingSenderId: "942094844527",
+                    appId: "1:942094844527:web:7f4c7ef20258d224c9839a",
+                    measurementId: "G-ER7FTGWB09"
+                  };
+                  // Initialize Firebase
+                  firebase.initializeApp(firebaseConfig);
+                  firebase.analytics();
+                  </script>
+                  <script src="src/assets/libs/jquery/dist/jquery.min.js"></script>
+                  <script src="src/assets/libs/popper.js/dist/umd/popper.min.js"></script>
+                  <script src="src/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+                  <!-- apps -->
+                  <!-- apps -->
+                  <script src="src/dist/js/app-style-switcher.js"></script>
+                  <script src="src/dist/js/feather.min.js"></script>
+                  <script src="src/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+                  <script src="src/dist/js/sidebarmenu.js"></script>
+                  <!--Custom JavaScript -->
+                  <script src="src/dist/js/custom.min.js"></script>
+                  <!--This page JavaScript -->
+                  <script src="src/assets/extra-libs/c3/d3.min.js"></script>
+                  <script src="src/assets/extra-libs/c3/c3.min.js"></script>
+                  <script src="src/assets/libs/chartist/dist/chartist.min.js"></script>
+                  <script src="src/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+                  <script src="src/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.min.js"></script>
+                  <script src="src/assets/extra-libs/jvector/jquery-jvectormap-world-mill-en.js"></script>
+                  <script src="src/dist/js/pages/dashboards/dashboard1.min.js"></script>
+                  <script src="src/dist/js/carbon.js" charset="utf-8"></script>
+                </body>
+                </html>

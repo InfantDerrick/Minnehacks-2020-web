@@ -130,7 +130,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         var snapval = snap.val();
         air = snapval.air;
         car = snapval.car;
-        electricity = snapval.electricty;
+        electricity = snapval.electricity;
         gas = snapval.gas;
         oil = snapval.oil;
         public = snapval.public;
