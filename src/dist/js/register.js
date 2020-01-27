@@ -19,11 +19,11 @@ function register(){
       var errorMessage = error.message;
       window.alert(error);
     }).then(function(){
-      firebase.database().ref('users/'+ dpn +"/").set({
+      firebase.database().ref('super/'+ dpn +"/").set({
         name: $("#name").val(),
         points: 0
       }).then(function(){
-        firebase.database().ref('users/'+ dpn +"/carbon/").set({
+        firebase.database().ref('super/'+ dpn +"/carbon/").set({
           air: 0,
           car: 0,
           electricity: 0,
@@ -32,7 +32,7 @@ function register(){
           public: 0,
           total: 0
         }).then(function(){
-          firebase.database().ref('users/'+dpn+'/devices').set({
+          firebase.database().ref('super/'+dpn+'/devices').set({
             door: true,
             humidity: 0,
             leak: false,
