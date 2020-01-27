@@ -5,6 +5,13 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log(user.displayName);
     dpn = user.displayName;
     userRef = firebase.database().ref('super/' + dpn + '/carbon');
+    userRef.child("name").once('value', function(snap){
+      console.log(snap.val());
+      $("#personName").text(snap.val());
+    });
+    userRef.child("photo").once('value', function(snap){
+      $('#userProfile').attr('src', snap.val());
+    });
   }else{
     console.log("what...");
     window.open('./login.html', '_self');
