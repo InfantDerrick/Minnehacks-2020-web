@@ -1,7 +1,7 @@
 var dpn, air, car, electricity, gas, oil, public, total, points;
 firebase.auth().onAuthStateChanged(function(user) {
   if(user){
-    window.open('./const.html');
+    window.open('./const.html', "_self");
     console.log(user.displayName);
     dpn = user.displayName;
     var userRef = firebase.database().ref('super/'+dpn+"/");
